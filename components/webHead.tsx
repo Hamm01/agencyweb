@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const AgencyHead: React.FC = () => {
     return (
-        <div className='min-h-screen w-[100vw] flex flex-col justify-center items-center'>
+        <div className='min-h-screen  flex flex-col justify-center items-center'>
             <video autoPlay loop muted playsInline className='absolute w-full h-full object-cover'>
                 {/* <source src="/assets/snaphead-bg.m4v" type="video/mp4; codecs=hvc1" /> */}
                 <source src="/assets/snaphead-bg.webm" type="video/webm; codecs=vp9" />

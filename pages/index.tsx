@@ -3,11 +3,12 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import AgencyHead from "../components/webHead";
+import Aboutus from "../components/aboutus";
 
 const Home: NextPage = () => {
   return (
     <div
-      className="container"
+      className="w-[100vw]"
     >
       <Head>
         <title>Agency app</title>
@@ -15,6 +16,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <AgencyHead />
+      <Aboutus />
 
 
 
