@@ -8,7 +8,7 @@ import Aboutus from "../components/aboutus";
 const Home: NextPage = () => {
   return (
     <div
-      className="w-[100vw]"
+      className="w-full"
     >
       <Head>
         <title>Agency app</title>
