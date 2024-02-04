@@ -7,7 +7,7 @@ interface ScrollValue {
 
 export const ScrollContext = React.createContext<ScrollValue>({ scrollY: 0 })
 
-const ScrollObserver: React.FC = ({ children }: any) => {
+const ScrollObserver: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
     const [scrollY, setScrollY] = useState(0)
     const handleScroll = useCallback(() => {
@@ -15,7 +15,7 @@ const ScrollObserver: React.FC = ({ children }: any) => {
     }, [])
     useEffect(() => {
         document.addEventListener('scroll', handleScroll, { passive: true })
-        console.log("Himanish", scrollY)
+
         return () => document.removeEventListener('scroll', handleScroll)
     }, [handleScroll])
     return (
@@ -24,5 +24,6 @@ const ScrollObserver: React.FC = ({ children }: any) => {
         </ScrollContext.Provider>
     )
 }
+
 
 export default ScrollObserver
