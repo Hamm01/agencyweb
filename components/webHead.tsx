@@ -1,10 +1,19 @@
-import React from 'react'
+import React, { useState, useRef, useCallback, useContext } from 'react'
 import Image from 'next/image'
+import { ScrollContext } from '../utils/scroll-observer'
 
 const AgencyHead: React.FC = () => {
+
+    const refContainer = useRef<HTMLDivElement>(null)
+    const { scrollY } = useContext(ScrollContext)
+    let progress = 0
+    const { current: elContainer } = refContainer
+    if (elContainer) {
+        progress = Math.min(1, scrollY / elContainer.clientHeight)
+    }
     return (
-        <div className='min-h-screen flex flex-col justify-center items-center'>
-            <video autoPlay loop muted playsInline className='absolute w-full h-full object-cover'>
+        <div ref={refContainer} className='min-h-screen sticky top-0 -z-10 flex flex-col justify-center items-center' style={{ transform: `translateY((-${progress} * 20)vh )` }}>
+            <video autoPlay muted playsInline className='absolute w-full h-full object-cover'>
                 {/* <source src="/assets/snaphead-bg.m4v" type="video/mp4; codecs=hvc1" /> */}
                 <source src="/assets/snaphead-bg.webm" type="video/webm; codecs=vp9" />
             </video>
