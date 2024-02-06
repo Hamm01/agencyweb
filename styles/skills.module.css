@@ -1,0 +1,4 @@
+.skillText {
+    transition: opacity 0.6s;
+    /* will-change: transform, opacity; */
+}
