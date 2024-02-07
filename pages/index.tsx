@@ -5,6 +5,7 @@ import Image from "next/image";
 import AgencyHead from "../components/webHead";
 import Aboutus from "../components/aboutus";
 import Skills from "../components/skills";
+import { TileWrapper } from "../components/tile";
 
 const Home: NextPage = () => {
   return (
@@ -19,6 +20,7 @@ const Home: NextPage = () => {
       <AgencyHead />
       <Aboutus />
       <Skills />
+      <TileWrapper />
 
 
 
