@@ -28,16 +28,9 @@ const Skills: React.FC = () => {
     if (elContainer) {
         const { clientHeight, offsetTop } = elContainer
         const screenH = window.innerHeight
-
         const halfH = screenH / 2
         const percentY = Math.min(clientHeight + halfH, Math.max(-screenH, scrollY - offsetTop) + halfH) / clientHeight
         progress = Math.min(noOfPages - 0.5, Math.max(0.5, percentY * noOfPages))
-        console.log("clientHeight ", clientHeight)
-        console.log("offsetTop ", offsetTop)
-        console.log("screenH ", screenH)
-        console.log("scrollY ", scrollY)
-        console.log("percentY ", percentY)
-        console.log("progress ", progress)
     }
     return (
         <div ref={refContainer} className="bg-black text-white">

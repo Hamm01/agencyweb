@@ -25,8 +25,8 @@ const AgencyHead: React.FC = () => {
             </div>
             <div className='p-12 font-bold z-10 text-white drop-shadow-[0_5px_3px_rgba(0,0,0,0.4)] text-center flex-1 flex flex-col items-center justify-center'>
 
-                <h1 className='mb-6 text-3xl xl:text-4xl'>Himanish Portfolio</h1>
-                <h2 className='mb-2 text-xl xl:text-2xl tracking-tight'>
+                <h1 className={`mb-6 text-3xl xl:text-6xl translate-opacity duration-500  ease-in-out  ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}>Himanish Portfolio</h1>
+                <h2 className={`mb-2 text-xl xl:text-4xl tracking-tight translate-opacity duration-500 ease-in-out   ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}>
                     <span>Full Stack Developer </span><br />
                     <span>App Devlopement, </span>
                     <span>done right.</span>
