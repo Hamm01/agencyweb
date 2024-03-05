@@ -27,7 +27,13 @@ export const TileWrapper: React.FC<WrapperProps> = ({ children, numOfPages }) =>
         const percentY = Math.min(clientHeight + halfH, Math.max(-screenH, scrollY - offsetTop) + halfH) / clientHeight
         currentPage = percentY * numOfPages
 
-
+        console.log("clientHeight ", clientHeight)
+        console.log("scrollY ", scrollY)
+        console.log("screenH ", screenH)
+        console.log("offsetTop ", offsetTop)
+        console.log("percentY ", percentY)
+        console.log("numOfPages ", numOfPages)
+        console.log("currentPage ", currentPage)
 
     }
 
@@ -61,7 +67,8 @@ export const Tile: React.FC<Props> = ({ page, renderContent }) => {
         opacity = Math.max(0, (1.0 - progress) * 4)
     }
 
-
+    console.log("progress ", progress)
+    console.log("opacity ", opacity)
     return (
         <div ref={refContainer} className="absolute top-0 w-full" style={{
             pointerEvents: progress <= 0 || progress >= 1 ? 'none' : undefined,
