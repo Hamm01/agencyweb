@@ -1,4 +1,4 @@
-import React, { Children, useCallback, useEffect, useState } from 'react'
+import React, { useCallback, useContext, useEffect, useState } from 'react'
 
 interface ScrollValue {
     innerWidth: number
@@ -7,12 +7,19 @@ interface ScrollValue {
 
 export const SizeContext = React.createContext<ScrollValue>({ innerWidth: 0 })
 
+export function getInnerWidth() {
+
+    const { innerWidth } = useContext(SizeContext)
+
+    return innerWidth
+}
+
 const SizeObserver: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
-    const [innerWidth, SetInnerWidth] = useState(0)
+    const [innerWidth, setInnerWidth] = useState(0)
     const handleResize = useCallback(() => {
 
-        SetInnerWidth(window.innerWidth)
+        setInnerWidth(window.innerWidth)
 
     }, [])
     useEffect(() => {
