@@ -1,4 +1,5 @@
 import React from 'react'
+import ClientLogos from './client-logos'
 
 const TrustedBy: React.FC = () => (
 
@@ -9,7 +10,7 @@ const TrustedBy: React.FC = () => (
                 <span className='whitespace-nowrap'>trusted by</span>{' '}
                 <span className='whitespace-nowrap'>some of the apps you use daily</span>
             </h3>
-            <div>Logos</div>
+            <ClientLogos />
         </div>
         <div className='flex flex-col justify-center items-center'>
 
