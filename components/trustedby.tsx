@@ -1,5 +1,6 @@
 import React from 'react'
 import ClientLogos from './client-logos'
+import Testiomonials from './testimonials'
 
 const TrustedBy: React.FC = () => (
 
@@ -18,7 +19,7 @@ const TrustedBy: React.FC = () => (
                 <h3 className='text-3xl lg:text-4xl tracking-tight text-center px-10 !leading-[3.5rem]'>I believe in good communication and a fully transparent development process</h3>
             </div>
         </div>
-        <div className="">testimonials</div>
+        <Testiomonials />
         <div className="flex-1 bg-black "> </div>
     </section>)
 
